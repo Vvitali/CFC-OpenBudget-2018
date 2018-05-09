@@ -1,16 +1,18 @@
 import React from 'react';
 
+import About from '../../components/about/about.js';
+
 export default class Home extends React.Component {
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                    <h1 className="App-title">Welcome to Open Budget Charlotte</h1>
-                </header>
-                <p>Our goal is to show the open budget data for Charlotte, North Carolina.</p>
-                <p>Look here for data visualizations later.</p>
-
+            <header className="App-header">
+            <h1 className="App-title">Welcome to Open Budget Charlotte</h1>
+            </header>
+            <p>Our goal is to show the open budget data for Charlotte, North Carolina.</p>
+            <p>Look here for data visualizations later.</p>
+            <About/>
             </div>
-        );
+            );
     }
 }
