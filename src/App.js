@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import NavBar from './components/navbar';
 import HomeRoute from './routes/home';//home route
-import VisualizationRoute from "./routes/visualization";
+import VisualizationRoute from "./routes/visualization";//visualization route
 import Footer from './components/footer/footer.js';
 import {
   BrowserRouter as Router,
