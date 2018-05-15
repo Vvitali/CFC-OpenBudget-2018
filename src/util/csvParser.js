@@ -1,12 +1,13 @@
+const DEBUG = false;
 const csvParser = (initialString)=>{
 	if(typeof(initialString)!="string"){
 		return "Not a string!"; 
 	}
-	const parserObject = [];
+	const parsedObject = [];
 	const splittedString = initialString.split("\n");
-	console.log(splittedString[0]);
+	DEBUG && console.log(splittedString[0]);
 	splittedString.forEach( function(row, index) {
-		console.log(row);
+		DEBUG && console.log(row);
 		let temp = {
 			account: null
 			, description:null
@@ -15,12 +16,13 @@ const csvParser = (initialString)=>{
 			, FID: null
 		}
 		temp = {...row.split(",")};
-		console.log(temp);
+		DEBUG && console.log(temp);
+		parsedObject.push(temp);
 
 	});
 	//ACCOUNT,ACCOUNT_DESCRIPTION,TYPE,ORIGINAL_APPROP,FID <- ROWS titles
 
 
-	return parserObject
+	return parsedObject
 }
 export default csvParser;
