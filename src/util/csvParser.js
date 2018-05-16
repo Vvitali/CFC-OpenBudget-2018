@@ -1,4 +1,7 @@
 const DEBUG = false;
+//this method accepts a string (a long long string) of data from csv file, 
+//and parse it into one array of js-objects with 5 fields
+//returns Object
 const csvParser = (initialString)=>{
 	if(typeof(initialString)!="string"){
 		return "Not a string!"; 
@@ -21,7 +24,6 @@ const csvParser = (initialString)=>{
 
 	});
 	//ACCOUNT,ACCOUNT_DESCRIPTION,TYPE,ORIGINAL_APPROP,FID <- ROWS titles
-
 
 	return parsedObject
 }

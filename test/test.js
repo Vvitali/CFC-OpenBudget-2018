@@ -1,14 +1,19 @@
 var assert = require('assert');
 import 'babel-polyfill';
 
-var csvParser = require("../src/util/csvParser.js");
+import csvParser from "../src/util/csvParser.js";
 
 describe('Array', function() {
 	describe('#indexOf()', function() {
+
+		it('should return an object', function() {
+			const returnedObject = 	csvParser("ACCOUNT,ACCOUNT_DESCRIPTION,TYPE,ORIGINAL_APPROP,FID");
+			assert.equal(typeof(returnedObject), "object");
+		});
+
 		it('should return an object with 5 fields', function() {
-
-
-			assert.equal([1,2,3].indexOf(4), -1);
+			const returnedObject = 	csvParser("ACCOUNT,ACCOUNT_DESCRIPTION,TYPE,ORIGINAL_APPROP,FID");			
+			assert.equal(Object.keys(returnedObject[0]).length, 5);
 		});
 	});
 });
