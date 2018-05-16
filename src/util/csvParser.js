@@ -21,6 +21,7 @@ const csvParser = (initialString)=>{
 		temp = {...row.split(",")};
 		DEBUG && console.log(temp);
 		parsedObject.push(temp);
+		
 
 	});
 	//ACCOUNT,ACCOUNT_DESCRIPTION,TYPE,ORIGINAL_APPROP,FID <- ROWS titles
