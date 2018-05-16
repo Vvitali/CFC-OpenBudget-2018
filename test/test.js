@@ -17,7 +17,7 @@ describe('Array', function() {
 		});
 
 		it('OBJECT FIELDS NOT empty', function() {
-			const returnedObject = csvParser("ACCOUNT,ACCOUNT_DESCRIPTION,TYPE,ORIGINAL_APPROP,FID");			
+			const returnedObject = csvParser(`ACCOUNT,ACCOUNT_DESCRIPTION,TYPE,ORIGINAL_APPROP,FID`);			
 			const testData =  {
 				account: "ACCOUNT"
 				, description:"ACCOUNT_DESCRIPTION"
@@ -25,7 +25,7 @@ describe('Array', function() {
 				, ORIGINAL_APPROP: "ORIGINAL_APPROP"
 				, FID: "FID"
 			};
-			assert.equal(returnedObject[0], testData);
+			assert.deepEqual(returnedObject[0], testData);
 		});
 
 	});
